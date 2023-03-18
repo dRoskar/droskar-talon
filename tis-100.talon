@@ -91,3 +91,5 @@ hard exit:
 
 settings():
     key_wait = 18
+
+    
