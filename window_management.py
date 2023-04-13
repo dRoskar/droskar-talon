@@ -1,7 +1,6 @@
 import os
 import time
 import talon
-import subprocess
 from talon import Context, Module, ui, actions
 
 mod = Module()
@@ -15,12 +14,6 @@ ctx_default.lists["user.installed_apps"] = {
 
 @mod.action_class
 class Actions:
-    # def app_open(appId: str):
-    #     """Open an application by AppUserModel ID"""
-    #     print(appId)
-    #     cmd = f"explorer.exe shell:AppsFolder\\{appId}"
-    #     subprocess.Popen(cmd, shell=False)
-
     def app_open(path: str):
         """Open an application by path"""
         ui.launch(path=path)
