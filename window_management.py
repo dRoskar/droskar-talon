@@ -1,7 +1,8 @@
 import os
+import time
 import talon
 import subprocess
-from talon import Context, Module, ui
+from talon import Context, Module, ui, actions
 
 mod = Module()
 mod.list("installed_apps", desc="Installed apps")
