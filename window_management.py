@@ -22,13 +22,11 @@ class Actions:
 
     def app_open(path: str):
         """Open an application by path"""
-        print(path)
         ui.launch(path=path)
 
     def app_focus(path: str):
         """Focus an application by path"""
         app = get_running_app(path)
-        print(app)
         switcher_focus_app(app)
 
 def switcher_focus_app(app: ui.App):
@@ -43,8 +41,6 @@ def switcher_focus_app(app: ui.App):
 def get_running_app(path: str) -> ui.App:
         """Get the running app with `path`."""
         for application in ui.apps(background=False):
-            print(application.name)
-            print(os.path.basename(application.exe))
             if os.path.basename(application.exe) == os.path.basename(path):
                 return application
         raise RuntimeError(f'App not running: "{path}"')
