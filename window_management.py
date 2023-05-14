@@ -9,7 +9,8 @@ mod.list("installed_apps", desc="Installed apps")
 ctx_default = Context ()
 ctx_default.lists["user.installed_apps"] = {
     "note": "C:\\Program Files (x86)\\Notepad++\\notepad++.exe",
-    "source": f"{os.getenv('USERPROFILE')}\\AppData\\Local\\SourceTree\\app-3.4.6\\SourceTree.exe"
+    "source": f"{os.getenv('USERPROFILE')}\\AppData\\Local\\SourceTree\\app-3.4.6\\SourceTree.exe",
+    "code": "C:\\Program Files\\Microsoft VS Code\\Code.exe"
 }
 
 @mod.action_class
