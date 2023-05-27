@@ -1,9 +1,9 @@
 os: windows
 -
-parrot(cluck):
-	print("cluck")
-	user.cluck()
-	core.repeat_phrase(1)
+# parrot(cluck):
+# 	print("cluck")
+# 	user.cluck()
+# 	core.repeat_phrase(1)
 
 parrot(pop):
 	print("pop")
@@ -11,4 +11,8 @@ parrot(pop):
 
 parrot(side):
 	print("side")
-	user.toggle_drag()
+	user.toggle_drag()  
+	
+parrot(tsk):
+	print("tsk")
+	edit.paste()
