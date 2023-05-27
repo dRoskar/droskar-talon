@@ -34,12 +34,12 @@ class Actions:
             print("cluck inactive")
         threading.Thread(target=cluck_inactive).start()
 
-def on_pop(_active):
-    global cluck_active
-    if not cluck_active:
-        time.sleep(0.01)
-        ctrl.mouse_click(button=0, hold=16000)
-    else:
-        print("Mouse button not clicked due to cluck being active")
+# def on_pop(_active):
+#     global cluck_active
+#     if not cluck_active:
+#         time.sleep(0.01)
+#         ctrl.mouse_click(button=0, hold=16000)
+#     else:
+#         print("Mouse button not clicked due to cluck being active")
 
-noise.register("pop", on_pop)
+# noise.register("pop", on_pop)
