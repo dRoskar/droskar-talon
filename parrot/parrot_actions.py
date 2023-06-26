@@ -1,4 +1,4 @@
-from talon import Module, actions, ctrl, noise
+from talon import Module, actions, ctrl, noise, cron
 
 import time
 import threading
@@ -6,6 +6,7 @@ import threading
 mod = Module()
 dragging = False
 cluck_active = False
+cron_job = None
 
 @mod.action_class
 class Actions:
@@ -34,6 +35,26 @@ class Actions:
             print("cluck inactive")
         threading.Thread(target=cluck_inactive).start()
 
+    def noise_copy_paste():
+        """Paste the selected text, on double noise, copy it."""
+        #actions.key("ctrl-c")
+        global cron_job
+        if cron_job:
+            actions.key("ctrl-c")
+
+            print("double noise")
+            
+            cron.cancel(cron_job)
+            cron_job = None
+        else:
+            cron_job = cron.after("500ms", on_after)
+
+def on_after():
+    global cron_job
+    cron_job = None
+    actions.key("ctrl-v")
+    print("single noise")
+    
 # def on_pop(_active):
 #     global cluck_active
 #     if not cluck_active:

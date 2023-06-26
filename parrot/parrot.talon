@@ -15,4 +15,5 @@ parrot(side):
 	
 parrot(tsk):
 	print("tsk")
-	edit.paste()
+	#edit.paste()
+	user.noise_copy_paste()
