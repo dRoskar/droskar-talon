@@ -12,7 +12,7 @@ from talon_init import TALON_HOME
 
 PARROT_HOME = TALON_HOME / 'parrot'
 pattern_path = str(PARROT_HOME / 'patterns.json')
-model_path = str(PARROT_HOME / 'model-2023-05-26.pkl')
+model_path = str(PARROT_HOME / 'model-2023-06-18.pkl')
 
 ## START PARROT CLASSES ##
 class PatternMatcher:
