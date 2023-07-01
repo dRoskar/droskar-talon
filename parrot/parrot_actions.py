@@ -41,7 +41,7 @@ class Actions:
         global cron_job
         if cron_job:
             actions.key("ctrl-c")
-
+            actions.key("ctrl-shift-alt-win-q")
             print("double noise")
             
             cron.cancel(cron_job)
